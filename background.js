@@ -24,7 +24,7 @@ chrome.action.onClicked.addListener((tab) => {
         
         const response = await fetch(imageUrl);
         if (response.ok) {
-          return imageUrl;
+          return `![LGTM](${imageUrl})`;
         }
       } catch (err) {
         console.error('画像の検証に失敗:', err);
