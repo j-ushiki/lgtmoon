@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Your Extension Name",
+  "version": "1.2",
+  "description": "Copies the first image URL from LGTMOON API to clipboard",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://lgtmoon.herokuapp.com/*",
+    "https://image.lgtmoon.dev/*"
+  ],
+  "action": {},
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://lgtmoon.herokuapp.com https://image.lgtmoon.dev;"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
