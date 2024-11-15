@@ -1,11 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Your Extension Name",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Copies the first image URL from LGTMOON API to clipboard",
   "permissions": [
     "scripting",
-    "activeTab"
+    "activeTab",
+    "notifications"
   ],
   "host_permissions": [
     "https://lgtmoon.herokuapp.com/*",
